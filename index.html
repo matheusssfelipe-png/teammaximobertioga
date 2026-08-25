@@ -753,36 +753,17 @@
 
     @media (max-width: 767px) {
       .professor-grid {
-        display: flex;
-        flex-direction: column;
         gap: 24px;
       }
 
       .professor-photo {
-        order: 2;
-      }
-
-      .professor-content {
-        order: 1;
-        display: flex;
-        flex-direction: column;
+        position: relative;
       }
 
       .professor-content .section-label {
-        order: -1;
-        align-self: flex-start;
-        margin-bottom: 12px;
-      }
-
-      .professor-content h2 {
-        order: 0;
-      }
-
-      .professor-content > p,
-      .professor-content > h3,
-      .professor-content .argument-cards,
-      .professor-content .branch-badge {
-        order: 1;
+        position: absolute;
+        top: -50px;
+        left: 0;
       }
     }
 
