@@ -753,17 +753,22 @@
 
     @media (max-width: 767px) {
       .professor-grid {
+        display: flex;
+        flex-direction: column;
         gap: 24px;
       }
 
-      .professor-photo {
-        position: relative;
+      .professor-content .section-label {
+        order: -2;
+        margin-bottom: 12px;
       }
 
-      .professor-content .section-label {
-        position: absolute;
-        top: -50px;
-        left: 0;
+      .professor-photo {
+        order: -1;
+      }
+
+      .professor-content {
+        order: 0;
       }
     }
 
