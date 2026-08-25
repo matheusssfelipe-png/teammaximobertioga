@@ -142,6 +142,10 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(193, 39, 45, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(193, 39, 45, 0.06) 0%, transparent 50%);
+      background-attachment: fixed;
     }
 
     /* ── TIPOGRAFIA FLUIDA ── */
@@ -512,11 +516,12 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(135deg,
-        rgba(30, 30, 39, 0.4) 0%,
-        rgba(38, 38, 49, 0.3) 25%,
-        rgba(193, 39, 45, 0.12) 50%,
-        rgba(38, 38, 49, 0.3) 75%,
-        rgba(30, 30, 39, 0.4) 100%);
+        #0a0a0f 0%,
+        rgba(193, 39, 45, 0.2) 20%,
+        rgba(30, 30, 39, 0.5) 40%,
+        rgba(193, 39, 45, 0.15) 60%,
+        rgba(38, 38, 49, 0.4) 80%,
+        #0a0a0f 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -606,9 +611,14 @@
        FAIXA DE TÍTULOS
     ══════════════════════════════════════════ */
     .titles-strip {
-      background: linear-gradient(135deg, rgba(38, 38, 49, 0.8) 0%, rgba(30, 30, 39, 0.5) 50%, rgba(38, 38, 49, 0.8) 100%);
-      border-top: 2px solid rgba(193, 39, 45, 0.3);
-      border-bottom: 2px solid rgba(193, 39, 45, 0.3);
+      background: linear-gradient(135deg,
+        #1a1a1f 0%,
+        rgba(193, 39, 45, 0.15) 25%,
+        rgba(30, 30, 39, 0.4) 50%,
+        rgba(193, 39, 45, 0.1) 75%,
+        #1a1a1f 100%);
+      border-top: 3px solid var(--accent);
+      border-bottom: 3px solid var(--accent);
       padding: 64px 0;
       overflow: hidden;
       position: relative;
@@ -622,8 +632,9 @@
       right: 0;
       bottom: 0;
       background:
-        radial-gradient(circle at 20% 50%, rgba(193, 39, 45, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 50%, rgba(193, 39, 45, 0.08) 0%, transparent 60%);
+        radial-gradient(circle at 15% 30%, rgba(193, 39, 45, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(193, 39, 45, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 0%, rgba(193, 39, 45, 0.1) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -1046,9 +1057,33 @@
        FORMULÁRIO
     ══════════════════════════════════════════ */
     .form-section {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg,
+        #0f0f13 0%,
+        rgba(193, 39, 45, 0.1) 30%,
+        rgba(30, 30, 39, 0.3) 50%,
+        rgba(193, 39, 45, 0.08) 70%,
+        #0f0f13 100%);
+      border-top: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
+      position: relative;
+    }
+
+    .form-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 25% 50%, rgba(193, 39, 45, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 75% 50%, rgba(193, 39, 45, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .form-section .container {
+      position: relative;
+      z-index: 1;
     }
 
     .form-wrapper {
@@ -1348,11 +1383,36 @@
        CTA FINAL
     ══════════════════════════════════════════ */
     .final-cta {
-      background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(193, 39, 45, 0.08) 100%);
-      border-top: 2px solid var(--accent);
-      border-bottom: 2px solid var(--accent);
+      background: linear-gradient(135deg,
+        rgba(193, 39, 45, 0.2) 0%,
+        rgba(193, 39, 45, 0.12) 25%,
+        #141418 50%,
+        rgba(193, 39, 45, 0.12) 75%,
+        rgba(193, 39, 45, 0.2) 100%);
+      border-top: 3px solid var(--accent);
+      border-bottom: 3px solid var(--accent);
       text-align: center;
       padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(193, 39, 45, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(193, 39, 45, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .final-cta .container {
+      position: relative;
+      z-index: 1;
     }
 
     .final-cta h2 {
@@ -1371,9 +1431,41 @@
        FOOTER
     ══════════════════════════════════════════ */
     .site-footer {
-      background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
-      border-top: 1px solid var(--border-light);
+      background: linear-gradient(135deg,
+        #0a0a0f 0%,
+        rgba(193, 39, 45, 0.08) 25%,
+        #111116 50%,
+        rgba(193, 39, 45, 0.06) 75%,
+        #0a0a0f 100%);
+      border-top: 2px solid var(--accent);
       padding: 64px 0 40px;
+      position: relative;
+    }
+
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(193, 39, 45, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .site-footer .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .site-footer .footer-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .site-footer .footer-bottom {
+      position: relative;
+      z-index: 1;
     }
 
     .footer-inner {
