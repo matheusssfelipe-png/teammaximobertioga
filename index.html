@@ -90,8 +90,8 @@
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "[[HORARIO_ABERTURA]]",
-        "closes": "[[HORARIO_FECHAMENTO]]"
+        "opens": "19:00",
+        "closes": "21:00"
       }
     ],
     "priceRange": "[[FAIXA_PRECO]]",
@@ -114,13 +114,17 @@
       --bg: #111116;
       --surface: #17171e;
       --surface-2: #1e1e27;
+      --surface-3: #262631;
       --border: #2a2a35;
+      --border-light: #333340;
       --text: #f4f4f7;
       --text-muted: #a3a3b2;
+      --text-light: #e5e5eb;
       --accent: #C1272D;
       --accent-2: #8E1B20;
       --accent-soft: color-mix(in srgb, #C1272D 18%, transparent);
-      --radius: 14px;
+      --radius: 16px;
+      --radius-lg: 20px;
       --maxw: 1120px;
       --header-h: 72px;
     }
@@ -134,7 +138,7 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -154,19 +158,23 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 5vw + 1rem, 3.75rem);
+      font-size: clamp(2.2rem, 6vw + 0.8rem, 4rem);
+      letter-spacing: -0.03em;
     }
 
     h2 {
-      font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+      font-size: clamp(1.7rem, 4vw + 0.4rem, 2.8rem);
+      letter-spacing: -0.02em;
     }
 
     h3 {
-      font-size: clamp(1.125rem, 2vw + 0.25rem, 1.5rem);
+      font-size: clamp(1.2rem, 2.5vw + 0.2rem, 1.6rem);
+      letter-spacing: -0.01em;
     }
 
     p {
-      font-size: clamp(0.9375rem, 1vw + 0.5rem, 1.0625rem);
+      font-size: clamp(1rem, 1.1vw + 0.55rem, 1.125rem);
+      letter-spacing: 0.2px;
     }
 
     /* ── UTILITÁRIOS ── */
@@ -178,14 +186,20 @@
     }
 
     .section-label {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      background: var(--accent-soft);
+      border-radius: 6px;
+      border: 1px solid var(--accent);
     }
 
     .btn-primary {
@@ -193,25 +207,27 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 14px 28px;
+      padding: 16px 32px;
       background: var(--accent);
       color: #fff;
       border: none;
       border-radius: var(--radius);
       font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      min-height: 48px;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      min-height: 50px;
       min-width: 44px;
+      box-shadow: 0 4px 16px rgba(193, 39, 45, 0.25);
     }
 
     .btn-primary:hover,
     .btn-primary:focus-visible {
       background: var(--accent-2);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(193, 39, 45, 0.35);
     }
 
     .btn-primary:active {
@@ -223,25 +239,26 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 14px 28px;
+      padding: 16px 32px;
       background: transparent;
       color: var(--text);
-      border: 1px solid var(--border);
+      border: 2px solid var(--border-light);
       border-radius: var(--radius);
       font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 700;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s, border-color 0.2s;
-      min-height: 48px;
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+      min-height: 50px;
       min-width: 44px;
     }
 
     .btn-secondary:hover,
     .btn-secondary:focus-visible {
       background: var(--surface-2);
-      border-color: var(--text-muted);
+      border-color: var(--text);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
 
     /* ── ANIMAÇÕES DE ENTRADA ── */
@@ -337,19 +354,21 @@
 
     .header-logo-text {
       font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 0.875rem;
+      font-weight: 800;
+      font-size: 0.9375rem;
       color: var(--text);
-      line-height: 1.2;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
     .header-logo-text small {
       display: block;
-      font-weight: 500;
-      font-size: 0.6875rem;
-      letter-spacing: 0.12em;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
       color: var(--text-muted);
       text-transform: uppercase;
+      margin-top: 2px;
     }
 
     /* Nav desktop */
@@ -478,7 +497,7 @@
       display: flex;
       align-items: center;
       padding-top: calc(var(--header-h) + 40px);
-      padding-bottom: 60px;
+      padding-bottom: 80px;
       overflow: hidden;
     }
 
@@ -492,7 +511,12 @@
     .hero-bg-placeholder {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 50%, rgba(193, 39, 45, 0.1) 100%);
+      background: linear-gradient(135deg,
+        rgba(30, 30, 39, 0.4) 0%,
+        rgba(38, 38, 49, 0.3) 25%,
+        rgba(193, 39, 45, 0.12) 50%,
+        rgba(38, 38, 49, 0.3) 75%,
+        rgba(30, 30, 39, 0.4) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -516,45 +540,76 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 680px;
+      max-width: 720px;
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero h1 {
-      margin-bottom: 20px;
+      margin-bottom: 28px;
+      letter-spacing: -0.03em;
+      font-size: clamp(2.4rem, 7vw + 0.8rem, 4.2rem);
+      line-height: 1.05;
     }
 
     .hero h1 .highlight {
       color: var(--accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero h1 .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), rgba(193, 39, 45, 0.3));
+      border-radius: 2px;
     }
 
     .hero-sub {
-      font-size: clamp(0.9375rem, 1.2vw + 0.5rem, 1.125rem);
+      font-size: clamp(1rem, 1.3vw + 0.5rem, 1.2rem);
       color: var(--text-muted);
-      margin-bottom: 12px;
-      max-width: 540px;
+      margin-bottom: 16px;
+      max-width: 560px;
+      line-height: 1.7;
     }
 
     .hero-offer {
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 600;
-      color: var(--text);
-      margin-bottom: 32px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      line-height: 1.5;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
+      margin-top: 48px;
     }
 
     /* ══════════════════════════════════════════
        FAIXA DE TÍTULOS
     ══════════════════════════════════════════ */
     .titles-strip {
-      background: linear-gradient(90deg, var(--surface) 0%, var(--surface-2) 50%, var(--surface) 100%);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 48px 0;
+      background: linear-gradient(135deg, rgba(38, 38, 49, 0.8) 0%, rgba(30, 30, 39, 0.5) 50%, rgba(38, 38, 49, 0.8) 100%);
+      border-top: 2px solid rgba(193, 39, 45, 0.3);
+      border-bottom: 2px solid rgba(193, 39, 45, 0.3);
+      padding: 64px 0;
       overflow: hidden;
       position: relative;
     }
@@ -566,7 +621,9 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 20% 50%, rgba(193, 39, 45, 0.05) 0%, transparent 50%);
+      background:
+        radial-gradient(circle at 20% 50%, rgba(193, 39, 45, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(193, 39, 45, 0.08) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -582,27 +639,28 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 16px;
-      background: var(--surface-2);
+      padding: 20px;
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(30, 30, 39, 0.6) 100%);
       border-radius: var(--radius);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-light);
     }
 
     .title-icon {
       flex-shrink: 0;
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--accent-soft);
-      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(193, 39, 45, 0.12));
+      border-radius: 10px;
       color: var(--accent);
+      box-shadow: 0 2px 8px rgba(193, 39, 45, 0.1);
     }
 
     .title-icon svg {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
     }
 
     .title-item-text {
@@ -649,13 +707,19 @@
     }
 
     .section-header {
-      margin-bottom: 48px;
+      margin-bottom: 64px;
+    }
+
+    .section-header h2 {
+      margin-bottom: 16px;
     }
 
     .section-header p {
       color: var(--text-muted);
-      max-width: 560px;
-      margin-top: 8px;
+      max-width: 580px;
+      margin-top: 12px;
+      font-size: 1.0625rem;
+      line-height: 1.7;
     }
 
     /* ══════════════════════════════════════════
@@ -692,12 +756,14 @@
     }
 
     .professor-content h2 {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .professor-content p {
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      font-size: 1.0625rem;
+      line-height: 1.7;
     }
 
     /* Caixas de argumento segmentado */
@@ -708,26 +774,28 @@
     }
 
     .argument-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
+      background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
     }
 
     .argument-card h3 {
       font-family: 'Inter', sans-serif;
-      font-size: 1rem;
+      font-size: 1.0625rem;
       font-weight: 700;
       text-transform: none;
       letter-spacing: 0;
-      margin-bottom: 10px;
-      color: var(--text);
+      margin-bottom: 12px;
+      color: var(--text-light);
     }
 
     .argument-card p {
-      font-size: 0.9375rem;
+      font-size: 0.9625rem;
       color: var(--text-muted);
       margin-bottom: 0;
+      line-height: 1.6;
     }
 
     /* Selo da filial */
@@ -768,49 +836,53 @@
     }
 
     .benefit-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      transition: border-color 0.2s, transform 0.2s;
+      background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
 
     .benefit-card:hover {
       border-color: var(--accent);
-      transform: translateY(-2px);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(193, 39, 45, 0.15);
     }
 
     .benefit-icon {
-      width: 44px;
-      height: 44px;
+      width: 52px;
+      height: 52px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--accent-soft);
-      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-soft), rgba(193, 39, 45, 0.15));
+      border-radius: 14px;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(193, 39, 45, 0.15);
     }
 
     .benefit-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 26px;
+      height: 26px;
     }
 
     .benefit-card h3 {
       font-family: 'Inter', sans-serif;
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 700;
       text-transform: none;
-      letter-spacing: 0;
-      margin-bottom: 6px;
-      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: var(--text-light);
     }
 
     .benefit-card p {
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-bottom: 0;
     }
 
     @media (min-width: 480px) {
@@ -835,22 +907,29 @@
     }
 
     .schedule-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
+      background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface) 100%);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .schedule-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
     }
 
     .schedule-card h3 {
       font-family: 'Inter', sans-serif;
-      font-size: 1.125rem;
+      font-size: 1.25rem;
       font-weight: 700;
       text-transform: none;
-      letter-spacing: 0;
-      margin-bottom: 4px;
-      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      color: var(--text-light);
     }
 
     .schedule-card .schedule-audience {
@@ -896,9 +975,9 @@
 
     .step-item {
       display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 20px;
-      padding-bottom: 40px;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding-bottom: 48px;
       position: relative;
     }
 
@@ -910,54 +989,57 @@
     .step-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 27px;
-      top: 56px;
+      left: 31px;
+      top: 64px;
       bottom: 0;
       width: 2px;
-      background: var(--border);
+      background: linear-gradient(to bottom, var(--border), transparent);
     }
 
     .step-number {
-      width: 56px;
-      height: 56px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
-      background: var(--accent-soft);
+      background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(193, 39, 45, 0.12) 100%);
       border: 2px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Anton', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: var(--accent);
       flex-shrink: 0;
       position: relative;
       z-index: 1;
+      box-shadow: 0 4px 16px rgba(193, 39, 45, 0.2);
     }
 
     .step-content h3 {
       font-family: 'Inter', sans-serif;
-      font-size: 1rem;
+      font-size: 1.125rem;
       font-weight: 700;
       text-transform: none;
-      letter-spacing: 0;
-      margin-bottom: 6px;
-      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: var(--text-light);
     }
 
     .step-content p {
       color: var(--text-muted);
-      font-size: 0.9375rem;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     .steps-conclusion {
-      margin-top: 32px;
-      padding: 20px 24px;
-      background: var(--accent-soft);
-      border-radius: var(--radius);
+      margin-top: 48px;
+      padding: 24px 28px;
+      background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(193, 39, 45, 0.1) 100%);
+      border-radius: var(--radius-lg);
       border: 1px solid var(--accent);
       font-weight: 600;
-      font-size: 0.9375rem;
+      font-size: 1.0625rem;
       color: var(--text);
+      box-shadow: 0 2px 12px rgba(193, 39, 45, 0.15);
     }
 
     /* ══════════════════════════════════════════
@@ -989,21 +1071,23 @@
     .form-group input,
     .form-group select {
       width: 100%;
-      padding: 14px 16px;
+      padding: 16px 18px;
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
-      transition: border-color 0.2s;
-      min-height: 48px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      min-height: 52px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .form-group input:focus,
     .form-group select:focus {
       outline: none;
       border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(193, 39, 45, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .form-group input::placeholder {
@@ -1143,9 +1227,10 @@
 
     .location-address {
       color: var(--text-muted);
-      font-size: 0.9375rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      margin-bottom: 28px;
+      font-weight: 500;
     }
 
     @media (min-width: 768px) {
@@ -1169,15 +1254,16 @@
       position: relative;
       aspect-ratio: 4/3;
       background: var(--surface);
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid var(--border-light);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     }
 
     .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(193, 39, 45, 0.2);
     }
 
     .gallery-item img {
@@ -1214,9 +1300,9 @@
     }
 
     .faq-item summary {
-      padding: 20px 0;
+      padding: 24px 0;
       font-family: 'Inter', sans-serif;
-      font-size: 0.9375rem;
+      font-size: 1.0625rem;
       font-weight: 600;
       color: var(--text);
       cursor: pointer;
@@ -1226,7 +1312,8 @@
       justify-content: space-between;
       gap: 16px;
       min-height: 44px;
-      transition: color 0.2s;
+      transition: color 0.3s;
+      letter-spacing: -0.01em;
     }
 
     .faq-item summary:hover {
@@ -1251,40 +1338,42 @@
     }
 
     .faq-answer {
-      padding-bottom: 20px;
+      padding-bottom: 24px;
       color: var(--text-muted);
-      font-size: 0.9375rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     /* ══════════════════════════════════════════
        CTA FINAL
     ══════════════════════════════════════════ */
     .final-cta {
-      background: var(--accent-soft);
-      border-top: 1px solid var(--accent);
-      border-bottom: 1px solid var(--accent);
+      background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(193, 39, 45, 0.08) 100%);
+      border-top: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
       text-align: center;
-      padding: 64px 0;
+      padding: 80px 0;
     }
 
     .final-cta h2 {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      font-size: 2.5rem;
     }
 
     .final-cta p {
-      color: var(--text-muted);
-      font-size: 1.0625rem;
-      margin-bottom: 28px;
+      color: var(--text-light);
+      font-size: 1.25rem;
+      margin-bottom: 36px;
+      font-weight: 500;
     }
 
     /* ══════════════════════════════════════════
        FOOTER
     ══════════════════════════════════════════ */
     .site-footer {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      padding: 48px 0 32px;
+      background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+      border-top: 1px solid var(--border-light);
+      padding: 64px 0 40px;
     }
 
     .footer-inner {
@@ -1307,12 +1396,13 @@
     .footer-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.8125rem;
-      transition: color 0.2s;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
     .footer-links a:hover {
-      color: var(--text);
+      color: var(--accent);
     }
 
     .footer-bottom {
@@ -1472,7 +1562,7 @@
       <div class="container hero-content">
         <span class="section-label">Team Máximo Bertioga</span>
         <h1>Jiu-jitsu em Bertioga com o método <span class="highlight">Team Máximo.</span></h1>
-        <p class="hero-sub">Faixa preta e campeão mundial Deny Marcus ensinando do primeiro dia até a faixa preta,
+        <p class="hero-sub">10 anos de faixa preta e multi campeão Deny Marcus ensinando do primeiro dia até a faixa preta,
           adulto e iniciante.</p>
         <p class="hero-offer">Sua primeira aula é gratuita e sem compromisso.</p>
         <div class="hero-actions">
@@ -1493,7 +1583,44 @@
     </section>
 
     <!-- ════════════════════════════════════════
-         FAIXA DE TÍTULOS
+         O PROFESSOR
+    ════════════════════════════════════════ -->
+    <section id="professor">
+      <div class="container">
+        <div class="professor-grid">
+          <div class="professor-photo reveal">
+            <!-- FOTO: Prof. Deny Marcus -->
+            <img src="images/professor-deny.jpg" alt="Prof. Deny Marcus - Faixa Preta" onerror="this.parentElement.classList.add('no-image')">
+          </div>
+          <div class="professor-content reveal">
+            <span class="section-label">A Academia</span>
+            <h2>Team Máximo Bertioga</h2>
+            <p>Team Máximo é uma academia de jiu-jitsu com filiais que seguem o mesmo método de ensino, do primeiro dia
+              até a faixa preta. Essa filial é uma delas.</p>
+            <h3 style="margin-top: 24px; margin-bottom: 12px;">Deny Marcus</h3>
+            <p>Faixa preta, compete e treina no mais alto nível há anos e lidera o treino aqui na filial.</p>
+            <p>Quem te ensina no tatame não é instrutor de curso rápido. É atleta de alto nível com resultado em
+              campeonato internacional.</p>
+
+            <div class="argument-cards">
+              <div class="argument-card">
+                <h3>"Se você é adulto e quer começar do zero"</h3>
+                <p>Ninguém vai te jogar contra faixa preta no primeiro dia. Você treina com gente do seu nível, no seu
+                  ritmo, com instrução individual quando precisa.</p>
+              </div>
+            </div>
+
+            <div class="branch-badge">
+              Filial oficial Team Máximo —
+              <a href="https://teammaximo.com.br/" target="_blank" rel="noopener">teammaximo.com.br</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FAIXA DE TÍTULOS — CONQUISTAS DO MESTRE
     ════════════════════════════════════════ -->
     <div class="titles-strip">
       <div class="container">
@@ -1562,43 +1689,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ════════════════════════════════════════
-         O PROFESSOR
-    ════════════════════════════════════════ -->
-    <section id="professor">
-      <div class="container">
-        <div class="professor-grid">
-          <div class="professor-photo reveal">
-            <!-- FOTO: Prof. Deny Marcus -->
-            <img src="images/professor-deny.jpg" alt="Prof. Deny Marcus - Faixa Preta" onerror="this.parentElement.classList.add('no-image')">
-          </div>
-          <div class="professor-content reveal">
-            <span class="section-label">A Academia</span>
-            <h2>Team Máximo Bertioga</h2>
-            <p>Team Máximo é uma academia de jiu-jitsu com filiais que seguem o mesmo método de ensino, do primeiro dia
-              até a faixa preta. Essa filial é uma delas.</p>
-            <h3 style="margin-top: 24px; margin-bottom: 12px;">Deny Marcus</h3>
-            <p>Faixa preta, compete e treina no mais alto nível há anos e lidera o treino aqui na filial.</p>
-            <p>Quem te ensina no tatame não é instrutor de curso rápido. É atleta de alto nível com resultado em
-              campeonato internacional.</p>
-
-            <div class="argument-cards">
-              <div class="argument-card">
-                <h3>"Se você é adulto e quer começar do zero"</h3>
-                <p>Ninguém vai te jogar contra faixa preta no primeiro dia. Você treina com gente do seu nível, no seu
-                  ritmo, com instrução individual quando precisa.</p>
-              </div>
-            </div>
-
-            <div class="branch-badge">
-              Filial oficial Team Máximo —
-              <a href="https://teammaximo.com.br/" target="_blank" rel="noopener">teammaximo.com.br</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ════════════════════════════════════════
          NOSSO ESPAÇO — GALERIA
@@ -1927,12 +2017,11 @@
           </details>
           <details class="faq-item reveal">
             <summary>Quanto custa a mensalidade?</summary>
-            <div class="faq-answer">[[INFORMAR VALORES OU: "Entre em contato pelo WhatsApp que a gente te passa os
-              valores atualizados."]]</div>
+            <div class="faq-answer">A mensalidade é R$180 por mês, com treino todos os dias. Entre em contato pelo WhatsApp para informações sobre pacotes ou promoções especiais.</div>
           </details>
           <details class="faq-item reveal">
             <summary>Tem vestiário e chuveiro?</summary>
-            <div class="faq-answer">[[CONFIRMAR: sim ou não]]</div>
+            <div class="faq-answer">Sim, disponibilizamos vestiário com chuveiro e armários para guarda de pertences. Você pode se trocar e tomar banho após o treino sem problemas.</div>
           </details>
           <details class="faq-item reveal">
             <summary>Onde fica exatamente?</summary>
