@@ -749,26 +749,29 @@
     .professor-grid {
       display: grid;
       gap: 40px;
+      grid-template-columns: 1fr 1.3fr;
+      align-items: start;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .professor-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      .professor-content .section-label {
-        order: -2;
-        margin-bottom: 12px;
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .professor-photo {
-        order: -1;
+        order: 2;
       }
 
       .professor-content {
-        order: 0;
+        order: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .professor-content .section-label {
+        order: -1;
       }
     }
 
