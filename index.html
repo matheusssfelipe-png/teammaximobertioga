@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== TÍTULO E META ===== -->
+  <title>Jiu-Jitsu em Bertioga | Team Máximo — Filial Bertioga</title>
+  <meta name="description"
+    content="Aula de jiu-jitsu em Bertioga com professor faixa preta e campeão mundial. Treino todos os dias às 19h — primeira aula experimental grátis.">
+  <meta name="theme-color" content="#111116">
+  <!-- paleta oficial da marca: preto #111116 · branco #FFFFFF · vermelho #C1272D -->
+  <link rel="canonical" href="[[URL_DO_SITE]]">
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jiu-Jitsu em Bertioga | Team Máximo — Filial Bertioga">
+  <meta property="og:description"
+    content="Aula de jiu-jitsu em Bertioga com professor faixa preta e campeão mundial. Treino todos os dias às 19h — primeira aula experimental grátis.">
+  <meta property="og:image" content="[[URL_IMAGEM_OG_1200x630]]">
+  <meta property="og:url" content="[[URL_DO_SITE]]">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jiu-Jitsu em Bertioga | Team Máximo — Filial Bertioga">
+  <meta name="twitter:description"
+    content="Aula de jiu-jitsu em Bertioga com professor faixa preta e campeão mundial. Treino todos os dias às 19h — primeira aula experimental grátis.">
+  <meta name="twitter:image" content="[[URL_IMAGEM_OG_1200x630]]">
+
+  <!-- ===== FAVICON — monograma TM ===== -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23111116'/><text x='16' y='23' font-family='Arial,sans-serif' font-weight='bold' font-size='18' fill='white' text-anchor='middle'>TM</text></svg>">
+
+  <!-- ===== GOOGLE FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ===== META PIXEL (colar o ID onde indicado) ===== -->
+  <!--
+  <script>
+    // META PIXEL — Cole seu ID no lugar de [[META_PIXEL_ID]]
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '[[META_PIXEL_ID]]');
+    fbq('track', 'PageView');
+  </script>
+  -->
+
+  <!-- ===== GOOGLE ANALYTICS 4 (colar o ID onde indicado) ===== -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[[GA4_ID]]"></script>
+  <script>
+    // GA4 — Cole seu ID no lugar de [[GA4_ID]]
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[[GA4_ID]]');
+  </script>
+  -->
+
+  <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Team Máximo Bertioga",
+    "description": "Academia de jiu-jitsu em Bertioga com o faixa preta Deny Marcus, campeão mundial. Turmas para crianças, iniciantes e adultos.",
+    "url": "[[URL_DO_SITE]]",
+    "telephone": "+5513982071430",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua José Severino Matiazzo, 80",
+      "addressLocality": "Bertioga",
+      "addressRegion": "SP",
+      "postalCode": "11250-758",
+      "addressCountry": "BR",
+      "neighborhood": "Jardim Albatroz"
+    },
+    "sameAs": [
+      "https://www.instagram.com/denymarcusjiujitsu/"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "[[HORARIO_ABERTURA]]",
+        "closes": "[[HORARIO_FECHAMENTO]]"
+      }
+    ],
+    "priceRange": "[[FAIXA_PRECO]]",
+    "image": "[[URL_IMAGEM_ACADEMIA]]"
+  }
+  </script>
+
+  <!-- ===== CSS COMPLETO ===== -->
+  <style>
+    /* ── RESET E TOKENS ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #111116;
+      --surface: #17171e;
+      --surface-2: #1e1e27;
+      --border: #2a2a35;
+      --text: #f4f4f7;
+      --text-muted: #a3a3b2;
+      --accent: #C1272D;
+      --accent-2: #8E1B20;
+      --accent-soft: color-mix(in srgb, #C1272D 18%, transparent);
+      --radius: 14px;
+      --maxw: 1120px;
+      --header-h: 72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── TIPOGRAFIA FLUIDA ── */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      /* Anton só tem 400 */
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw + 1rem, 3.75rem);
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+    }
+
+    h3 {
+      font-size: clamp(1.125rem, 2vw + 0.25rem, 1.5rem);
+    }
+
+    p {
+      font-size: clamp(0.9375rem, 1vw + 0.5rem, 1.0625rem);
+    }
+
+    /* ── UTILITÁRIOS ── */
+    .container {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      min-height: 48px;
+      min-width: 44px;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--accent-2);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      min-height: 48px;
+      min-width: 44px;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      background: var(--surface-2);
+      border-color: var(--text-muted);
+    }
+
+    /* ── ANIMAÇÕES DE ENTRADA ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ── FOCO VISÍVEL ── */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* ══════════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════════ */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: rgba(17, 17, 22, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Logo no header */
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .header-logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    /* Placeholder do logo até ter a imagem real */
+    .header-logo-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 2px solid var(--border);
+    }
+
+    .header-logo-placeholder span {
+      font-family: 'Anton', sans-serif;
+      font-size: 18px;
+      color: #111116;
+      letter-spacing: -0.02em;
+    }
+
+    .header-logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .header-logo-text small {
+      display: block;
+      font-weight: 500;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* Nav desktop */
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-desktop a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-desktop a:hover,
+    .nav-desktop a:focus-visible {
+      color: var(--text);
+    }
+
+    .header-cta {
+      display: none;
+    }
+
+    /* Hambúrguer */
+    .hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Menu mobile overlay */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(17, 17, 22, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 999;
+      padding: 40px 20px;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 16px 0;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.125rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+    }
+
+    .mobile-menu .btn-primary {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    /* ── Desktop nav ── */
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+      }
+
+      .header-cta {
+        display: inline-flex;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--header-h) + 40px);
+      padding-bottom: 60px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    /* Placeholder de fundo do hero */
+    .hero-bg-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 50%, rgba(193, 39, 45, 0.1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      padding: 20px;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+          rgba(17, 17, 22, 0.88) 0%,
+          rgba(17, 17, 22, 0.6) 50%,
+          rgba(17, 17, 22, 0.95) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .hero h1 {
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .highlight {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(0.9375rem, 1.2vw + 0.5rem, 1.125rem);
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      max-width: 540px;
+    }
+
+    .hero-offer {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ══════════════════════════════════════════
+       FAIXA DE TÍTULOS
+    ══════════════════════════════════════════ */
+    .titles-strip {
+      background: linear-gradient(90deg, var(--surface) 0%, var(--surface-2) 50%, var(--surface) 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .titles-strip::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(193, 39, 45, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .titles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: var(--surface-2);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .title-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      border-radius: 8px;
+      color: var(--accent);
+    }
+
+    .title-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .title-item-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    @media (min-width: 768px) {
+      .titles-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .titles-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .title-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       SEÇÃO GENÉRICA
+    ══════════════════════════════════════════ */
+    section {
+      padding: 80px 0;
+      scroll-margin-top: calc(var(--header-h) + 20px);
+      position: relative;
+    }
+
+    section:nth-child(even) {
+      background: linear-gradient(to bottom, transparent 0%, rgba(193, 39, 45, 0.03) 100%);
+    }
+
+    section:nth-child(3n) {
+      background: linear-gradient(135deg, rgba(30, 30, 39, 0.4) 0%, transparent 100%);
+    }
+
+    .section-header {
+      margin-bottom: 48px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-top: 8px;
+    }
+
+    /* ══════════════════════════════════════════
+       O PROFESSOR
+    ══════════════════════════════════════════ */
+    .professor-grid {
+      display: grid;
+      gap: 40px;
+    }
+
+    .professor-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 2px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .professor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius);
+      display: block;
+    }
+
+    .professor-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .professor-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* Caixas de argumento segmentado */
+    .argument-cards {
+      display: grid;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .argument-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .argument-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .argument-card p {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    /* Selo da filial */
+    .branch-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 10px 16px;
+      background: var(--accent-soft);
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .branch-badge a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .professor-grid {
+        grid-template-columns: 1fr 1.3fr;
+        align-items: start;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       BENEFÍCIOS
+    ══════════════════════════════════════════ */
+    .benefits-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .benefit-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-soft);
+      border-radius: 10px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .benefit-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .benefit-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .benefit-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (min-width: 480px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       TURMAS E HORÁRIOS
+    ══════════════════════════════════════════ */
+    .schedule-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    .schedule-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .schedule-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .schedule-card .schedule-audience {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .schedule-card .schedule-times {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .schedule-card .btn-primary {
+      margin-top: 20px;
+      width: 100%;
+      font-size: 0.875rem;
+      padding: 12px 20px;
+    }
+
+    @media (min-width: 480px) {
+      .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .schedule-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       PRIMEIRA AULA — 5 PASSOS
+    ══════════════════════════════════════════ */
+    .steps-list {
+      display: grid;
+      gap: 0;
+      position: relative;
+    }
+
+    .step-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    .step-item:last-child {
+      padding-bottom: 0;
+    }
+
+    /* Linha vertical */
+    .step-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 27px;
+      top: 56px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.25rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-content h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .step-content p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .steps-conclusion {
+      margin-top: 32px;
+      padding: 20px 24px;
+      background: var(--accent-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--accent);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--text);
+    }
+
+    /* ══════════════════════════════════════════
+       FORMULÁRIO
+    ══════════════════════════════════════════ */
+    .form-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-wrapper {
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      transition: border-color 0.2s;
+      min-height: 48px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-group input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23a3a3b2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 44px;
+    }
+
+    .form-group select option {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Checkbox LGPD */
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .form-check input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .form-check label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1.4;
+    }
+
+    /* Erros de validação */
+    .field-error {
+      display: none;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .field-error.show {
+      display: block;
+    }
+
+    .form-group.has-error input,
+    .form-group.has-error select {
+      border-color: var(--accent);
+    }
+
+    /* Estado de sucesso */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .form-success.active {
+      display: block;
+    }
+
+    .form-success .success-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      background: var(--accent-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-success .success-icon svg {
+      width: 36px;
+      height: 36px;
+      color: var(--accent);
+    }
+
+    .form-success h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .form-success p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-size: 0.9375rem;
+    }
+
+    /* ══════════════════════════════════════════
+       MAPA / LOCALIZAÇÃO
+    ══════════════════════════════════════════ */
+    .location-grid {
+      display: grid;
+      gap: 32px;
+    }
+
+    .map-wrapper {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .location-info h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .location-address {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .location-grid {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: start;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       GALERIA — NOSSO ESPAÇO
+    ══════════════════════════════════════════ */
+    .gallery-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 4/3;
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius);
+      display: block;
+    }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--surface-2) 0%, rgba(193, 39, 45, 0.08) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.8125rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ══════════════════════════════════════════
+       FAQ
+    ══════════════════════════════════════════ */
+    .faq-list {
+      max-width: 720px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item summary {
+      padding: 20px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 44px;
+      transition: color 0.2s;
+    }
+
+    .faq-item summary:hover {
+      color: var(--accent);
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding-bottom: 20px;
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════════════
+       CTA FINAL
+    ══════════════════════════════════════════ */
+    .final-cta {
+      background: var(--accent-soft);
+      border-top: 1px solid var(--accent);
+      border-bottom: 1px solid var(--accent);
+      text-align: center;
+      padding: 64px 0;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 8px;
+    }
+
+    .final-cta p {
+      color: var(--text-muted);
+      font-size: 1.0625rem;
+      margin-bottom: 28px;
+    }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+    }
+
+    .footer-inner {
+      display: grid;
+      gap: 32px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8125rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--text);
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        grid-template-columns: 1fr auto;
+        align-items: start;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       BOTÃO FLUTUANTE WHATSAPP
+    ══════════════════════════════════════════ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 998;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+    }
+
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    /* No mobile, evita cobrir botão de envio do form */
+    @media (max-width: 767px) {
+      .whatsapp-float {
+        bottom: 20px;
+        right: 16px;
+      }
+    }
+
+    /* ══════════════════════════════════════════
+       SCROLLBAR CUSTOMIZADA
+    ══════════════════════════════════════════ */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--text-muted);
+    }
+
+    /* ══════════════════════════════════════════
+       SELECTION
+    ══════════════════════════════════════════ */
+    ::selection {
+      background: var(--accent);
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════ -->
+  <header class="site-header" id="topo">
+    <div class="header-inner">
+      <a href="#topo" class="header-logo" aria-label="Team Máximo Bertioga — Voltar ao topo">
+        <img src="images/logo.png" alt="Team Máximo Logo" class="header-logo-img">
+        <div class="header-logo-text">
+          TEAM MÁXIMO
+          <small>BERTIOGA</small>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-desktop">
+          <li><a href="#professor">A Academia</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#horarios">Horário</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#agendar" class="btn-primary header-cta">Agendar aula experimental</a>
+
+      <button class="hamburger" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+    <a href="#professor" class="mobile-link">A Academia</a>
+    <a href="#beneficios" class="mobile-link">Benefícios</a>
+    <a href="#como-funciona" class="mobile-link">Como funciona</a>
+    <a href="#horarios" class="mobile-link">Horário</a>
+    <a href="#contato" class="mobile-link">Contato</a>
+    <a href="#agendar" class="btn-primary mobile-link">Agendar aula experimental</a>
+  </div>
+
+  <main>
+
+    <!-- ════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <!-- FOTO: Substituir pela foto real do Prof. Deny Marcus no tatame ou em competição.
+             Proporção recomendada: 16:9, resolução mínima 1920×1080. -->
+        <div class="hero-bg-placeholder"></div>
+      </div>
+      <div class="container hero-content">
+        <span class="section-label">Team Máximo Bertioga</span>
+        <h1>Jiu-jitsu em Bertioga com o método <span class="highlight">Team Máximo.</span></h1>
+        <p class="hero-sub">Faixa preta e campeão mundial Deny Marcus ensinando do primeiro dia até a faixa preta,
+          adulto e iniciante.</p>
+        <p class="hero-offer">Sua primeira aula é gratuita e sem compromisso.</p>
+        <div class="hero-actions">
+          <a href="#agendar" class="btn-primary">
+            Agendar aula experimental grátis
+          </a>
+          <a href="https://wa.me/5513982071430?text=ol%C3%A1%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20jiu%20jitsu"
+            class="btn-secondary" target="_blank" rel="noopener">
+            <!-- Ícone WhatsApp inline -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FAIXA DE TÍTULOS
+    ════════════════════════════════════════ -->
+    <div class="titles-strip">
+      <div class="container">
+        <div class="titles-grid reveal">
+          <!-- Ícone medalha reutilizado em cada item -->
+          <div class="title-item">
+            <div class="title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <span class="title-item-text">Campeão Mundial</span>
+          </div>
+          <div class="title-item">
+            <div class="title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <span class="title-item-text">Campeão Sul-Americano</span>
+          </div>
+          <div class="title-item">
+            <div class="title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <span class="title-item-text">Campeão Internacional Open</span>
+          </div>
+          <div class="title-item">
+            <div class="title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <span class="title-item-text">Campeão World League</span>
+          </div>
+          <div class="title-item">
+            <div class="title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <span class="title-item-text">2x Campeão Brasileiro</span>
+          </div>
+          <div class="title-item">
+            <div class="title-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
+            <span class="title-item-text">2x Campeão Paulista</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         O PROFESSOR
+    ════════════════════════════════════════ -->
+    <section id="professor">
+      <div class="container">
+        <div class="professor-grid">
+          <div class="professor-photo reveal">
+            <!-- FOTO: Prof. Deny Marcus -->
+            <img src="images/professor-deny.jpg" alt="Prof. Deny Marcus - Faixa Preta" onerror="this.parentElement.classList.add('no-image')">
+          </div>
+          <div class="professor-content reveal">
+            <span class="section-label">A Academia</span>
+            <h2>Team Máximo Bertioga</h2>
+            <p>Team Máximo é uma academia de jiu-jitsu com filiais que seguem o mesmo método de ensino, do primeiro dia
+              até a faixa preta. Essa filial é uma delas.</p>
+            <h3 style="margin-top: 24px; margin-bottom: 12px;">Deny Marcus</h3>
+            <p>Faixa preta, compete e treina no mais alto nível há anos e lidera o treino aqui na filial.</p>
+            <p>Quem te ensina no tatame não é instrutor de curso rápido. É atleta de alto nível com resultado em
+              campeonato internacional.</p>
+
+            <div class="argument-cards">
+              <div class="argument-card">
+                <h3>"Se você é adulto e quer começar do zero"</h3>
+                <p>Ninguém vai te jogar contra faixa preta no primeiro dia. Você treina com gente do seu nível, no seu
+                  ritmo, com instrução individual quando precisa.</p>
+              </div>
+            </div>
+
+            <div class="branch-badge">
+              Filial oficial Team Máximo —
+              <a href="https://teammaximo.com.br/" target="_blank" rel="noopener">teammaximo.com.br</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         NOSSO ESPAÇO — GALERIA
+    ════════════════════════════════════════ -->
+    <section id="galeria">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Conheça nosso lugar</span>
+          <h2>Nosso espaço</h2>
+          <p>Veja onde a gente treina, nossa equipe, e como é o dia a dia no tatame.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal">
+            <img src="images/tatame-1.jpg" alt="Tatame e estrutura" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>Tatame<br>e estrutura</div>'">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/professor-deny-2.jpg" alt="Professor Deny Marcus" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>Professor<br>Deny Marcus</div>'">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/turma-iniciantes.jpg" alt="Turma de iniciantes" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>Turma de<br>iniciantes</div>'">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/treino-avancado.jpg" alt="Treino avançado" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>Treino<br>avançado</div>'">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/ambiente-interno.jpg" alt="Ambiente interno" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>Ambiente<br>interno</div>'">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/equipe.jpg" alt="Momento de equipe" onerror="this.parentElement.innerHTML='<div class=gallery-placeholder>Momento de<br>equipe</div>'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         BENEFÍCIOS
+    ════════════════════════════════════════ -->
+    <section id="beneficios">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Por que treinar jiu-jitsu</span>
+          <h2>O que muda quando você começa</h2>
+        </div>
+        <div class="benefits-grid">
+          <!-- Defesa pessoal -->
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Defesa pessoal real</h3>
+            <p>Jiu-jitsu funciona no chão, que é onde a briga de verdade acaba.</p>
+          </div>
+          <!-- Condicionamento -->
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3>Condicionamento sem academia</h3>
+            <p>Você sai suado sem precisar contar repetição.</p>
+          </div>
+          <!-- Saúde mental -->
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <h3>Cabeça no lugar</h3>
+            <p>Uma hora de tatame resolve o que o dia inteiro acumulou.</p>
+          </div>
+          <!-- Rotina -->
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <h3>Rotina que sustenta</h3>
+            <p>Treino fixo, todo dia, no mesmo horário: vira hábito, não depende de motivação.</p>
+          </div>
+          <!-- Autoconfiança -->
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <h3>Autoconfiança</h3>
+            <p>Saber se defender muda como você anda na rua.</p>
+          </div>
+          <!-- Comunidade -->
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+              </svg>
+            </div>
+            <h3>Comunidade</h3>
+            <p>Você treina com gente do bairro, e isso puxa você pra dentro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         COMO FUNCIONA O TREINO
+    ════════════════════════════════════════ -->
+    <section id="horarios">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Horário</span>
+          <h2>Como funciona o treino</h2>
+        </div>
+        <div class="reveal" style="max-width: 640px;">
+          <p style="font-size: 1.125rem; color: var(--text); font-weight: 600; margin-bottom: 12px;">Treino todos os
+            dias, às 19h.</p>
+          <p style="color: var(--text-muted); margin-bottom: 32px;">Todo mundo treina junto — iniciante e avançado — no mesmo horário, mas com abordagem adaptada pra cada nível. Ninguém joga o novato contra quem já é faixa
+            avançada.</p>
+          <a href="#agendar" class="btn-primary">Quero agendar minha aula</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         COMO É A SUA PRIMEIRA AULA
+    ════════════════════════════════════════ -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Primeira aula</span>
+          <h2>Como funciona sua aula experimental</h2>
+        </div>
+
+        <div class="steps-list">
+          <div class="step-item reveal">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Agende pelo formulário ou WhatsApp</h3>
+              <p>Você preenche o formulário aqui embaixo ou chama no WhatsApp e a gente combina o dia.</p>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Chegue 10 minutos antes</h3>
+              <p>Roupa confortável já resolve. Bermuda e camiseta servem.</p>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Não precisa comprar nada</h3>
+              <p>O kimono é emprestado. Você não precisa comprar nada.</p>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Treino às 19h, no seu ritmo</h3>
+              <p>Você treina junto com a turma, com abordagem adaptada pro seu nível. Ninguém te joga contra quem é mais
+                avançado.</p>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Você decide, sem pressão</h3>
+              <p>No fim, você decide. Sem compromisso e sem ninguém te cobrando.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps-conclusion reveal">
+          É gratuita, e é a mesma aula que os alunos matriculados fazem.
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FORMULÁRIO DE AGENDAMENTO
+    ════════════════════════════════════════ -->
+    <section class="form-section" id="agendar">
+      <div class="container">
+        <div class="form-wrapper">
+          <div class="section-header reveal" style="text-align: center;">
+            <span class="section-label">Agende agora</span>
+            <h2>Agende sua aula experimental gratuita</h2>
+            <p style="margin: 8px auto 0;">Preencha e a gente confirma seu horário pelo WhatsApp.</p>
+          </div>
+
+          <!-- FORMULÁRIO -->
+          <form id="formAgendamento" class="reveal" novalidate>
+            <div class="form-group" id="group-nome">
+              <label for="campo-nome">Nome completo *</label>
+              <input type="text" id="campo-nome" name="nome" placeholder="Seu nome" required minlength="3"
+                autocomplete="name">
+              <div class="field-error" id="erro-nome" aria-live="polite">Informe seu nome completo (mínimo 3
+                caracteres).</div>
+            </div>
+
+            <div class="form-group" id="group-telefone">
+              <label for="campo-telefone">Telefone / WhatsApp *</label>
+              <input type="tel" id="campo-telefone" name="telefone" placeholder="(00) 00000-0000" required
+                autocomplete="tel">
+              <div class="field-error" id="erro-telefone" aria-live="polite">Informe um telefone válido com DDD.</div>
+            </div>
+
+            <div class="form-group" id="group-email">
+              <label for="campo-email">E-mail *</label>
+              <input type="email" id="campo-email" name="email" placeholder="seu@email.com" required
+                autocomplete="email">
+              <div class="field-error" id="erro-email" aria-live="polite">Informe um e-mail válido.</div>
+            </div>
+
+
+
+            <div class="form-check" id="group-lgpd">
+              <input type="checkbox" id="campo-lgpd" name="lgpd" required>
+              <label for="campo-lgpd">Autorizo o contato pela Team Máximo Bertioga sobre a aula experimental.</label>
+            </div>
+            <div class="field-error" id="erro-lgpd" aria-live="polite" style="margin-top: -16px; margin-bottom: 16px;">
+              Você precisa autorizar o contato para continuar.</div>
+
+            <button type="submit" class="btn-primary" id="btn-enviar" style="width: 100%;">
+              Agendar aula experimental grátis
+            </button>
+          </form>
+
+          <!-- ESTADO DE SUCESSO -->
+          <div class="form-success" id="formSucesso">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3>Pronto!</h3>
+            <p>Sua mensagem foi aberta no WhatsApp; é só enviar que a gente confirma seu horário.</p>
+            <a href="#" id="linkWhatsAppFallback" class="btn-primary" target="_blank" rel="noopener">
+              Abrir o WhatsApp de novo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         ONDE TREINAMOS
+    ════════════════════════════════════════ -->
+    <section id="contato">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Localização</span>
+          <h2>Onde treinamos</h2>
+        </div>
+        <div class="location-grid">
+          <div class="map-wrapper reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.7491558559976!2d-46.13829!3d-23.86431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8c5f5f5f5f5f5%3A0x0!2sRua%20Jos%C3%A9%20Severino%20Matiazzo%2C%2080%20-%20Jardim%20Albatroz%2C%20Bertioga%20-%20SP%2C%2011250-758!5e0!3m2!1spt-BR!2sbr!4v1692921600000"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa da Team Máximo Bertioga no Google Maps" allowfullscreen="" aria-label="Mapa">
+            </iframe>
+          </div>
+          <div class="location-info reveal">
+            <h3>Team Máximo Bertioga</h3>
+            <p class="location-address">
+              Rua José Severino Matiazzo, 80<br>
+              Jardim Albatroz — Bertioga/SP<br>
+              CEP 11250-758
+            </p>
+            <a href="https://www.google.com/maps/dir//Rua+Jos%C3%A9+Severino+Matiazzo,+80+-+Jardim+Albatroz,+Bertioga+-+SP,+11250-758"
+              class="btn-secondary" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+              Como chegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FAQ
+    ════════════════════════════════════════ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Nunca treinei nada na vida. Vou passar vergonha?</summary>
+            <div class="faq-answer">Não. Todo mundo começa do zero. Você treina com abordagem adaptada pro seu nível;
+              ninguém te julga.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Estou fora de forma. Consigo acompanhar?</summary>
+            <div class="faq-answer">Sim. O treino respeita seu limite. Você vai melhorando o condicionamento aula a
+              aula, no seu ritmo.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Preciso comprar kimono para a aula experimental?</summary>
+            <div class="faq-answer">Não. O kimono é emprestado na aula experimental; você só precisa ir com roupa
+              confortável.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Quanto custa a mensalidade?</summary>
+            <div class="faq-answer">[[INFORMAR VALORES OU: "Entre em contato pelo WhatsApp que a gente te passa os
+              valores atualizados."]]</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Tem vestiário e chuveiro?</summary>
+            <div class="faq-answer">[[CONFIRMAR: sim ou não]]</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Onde fica exatamente?</summary>
+            <div class="faq-answer">Rua José Severino Matiazzo, 80 — Jardim Albatroz, Bertioga, SP. <a href="#contato"
+                style="color: var(--accent);">Veja no mapa.</a></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Mulher pode treinar?</summary>
+            <div class="faq-answer">Claro. Jiu-jitsu é pra todo mundo: homens e mulheres treinam juntos, no mesmo
+              horário.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Que horas é o treino?</summary>
+            <div class="faq-answer">Todos os dias, às 19h.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         CTA FINAL
+    ════════════════════════════════════════ -->
+    <section class="final-cta">
+      <div class="container reveal">
+        <h2>Sua primeira aula é gratuita</h2>
+        <p>Vem conhecer o tatame.</p>
+        <a href="#agendar" class="btn-primary">Agendar aula experimental grátis</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            <div class="header-logo-text">
+              TEAM MÁXIMO
+              <small>BERTIOGA</small>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.8125rem; margin-top: 12px; max-width: 340px;">
+            Rua José Severino Matiazzo, 80<br>
+            Jardim Albatroz — Bertioga/SP
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://wa.me/5513982071430" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.instagram.com/denymarcusjiujitsu/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://teammaximo.com.br/" target="_blank" rel="noopener">Team Máximo — Matriz</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© Team Máximo Bertioga. Todos os direitos reservados.</span>
+        <span>Filial oficial <a href="https://teammaximo.com.br/" target="_blank" rel="noopener">Team Máximo Jiu-Jitsu —
+            Araraquara/SP</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       BOTÃO FLUTUANTE WHATSAPP
+  ════════════════════════════════════════ -->
+  <a href="https://wa.me/5513982071430?text=ol%C3%A1%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20jiu%20jitsu"
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" id="whatsapp-float">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- ════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════ -->
+  <script>
+    /* ── NÚMERO DE WHATSAPP ──
+       Substitua 5513982071430 pelo número real no formato 5513999999999 */
+    const WHATSAPP_NUMERO = '5513982071430';
+
+    /* ══════════════════════════════════════
+       MENU MOBILE
+    ══════════════════════════════════════ */
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      this.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      // Impede scroll do body quando menu está aberto
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Fecha menu ao clicar num link
+    document.querySelectorAll('.mobile-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ══════════════════════════════════════
+       HEADER COMPACTO AO ROLAR
+    ══════════════════════════════════════ */
+    var lastScrollY = 0;
+    var header = document.querySelector('.site-header');
+
+    window.addEventListener('scroll', function () {
+      var currentScroll = window.scrollY;
+      if (currentScroll > 80) {
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.4)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+      lastScrollY = currentScroll;
+    }, { passive: true });
+
+    /* ══════════════════════════════════════
+       ANIMAÇÕES DE ENTRADA (IntersectionObserver)
+    ══════════════════════════════════════ */
+    // Respeita prefers-reduced-motion
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      // Se prefers-reduced-motion, mostra tudo direto
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+
+    /* ══════════════════════════════════════
+       BOTÕES "QUERO ESSA TURMA"
+       Rola até o formulário e pré-seleciona a turma
+    ══════════════════════════════════════ */
+    document.querySelectorAll('.schedule-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var turma = this.getAttribute('data-turma');
+        var select = document.getElementById('campo-turma');
+
+        // Tenta selecionar a opção correspondente
+        for (var i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === turma) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+
+        // Rola até o formulário
+        document.getElementById('agendar').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    /* ══════════════════════════════════════
+       MÁSCARA DE TELEFONE
+    ══════════════════════════════════════ */
+    var campoTelefone = document.getElementById('campo-telefone');
+
+    campoTelefone.addEventListener('input', function (e) {
+      var value = e.target.value.replace(/\D/g, '');
+      if (value.length > 11) value = value.slice(0, 11);
+
+      var formatted = '';
+      if (value.length > 0) formatted += '(' + value.slice(0, 2);
+      if (value.length >= 2) formatted += ') ';
+      if (value.length >= 3) {
+        if (value.length <= 6) {
+          formatted += value.slice(2);
+        } else if (value.length <= 10) {
+          // Fixo: (00) 0000-0000
+          formatted += value.slice(2, 6) + '-' + value.slice(6);
+        } else {
+          // Celular: (00) 00000-0000
+          formatted += value.slice(2, 7) + '-' + value.slice(7);
+        }
+      }
+
+      e.target.value = formatted;
+    });
+
+    /* ══════════════════════════════════════
+       VALIDAÇÃO E ENVIO DO FORMULÁRIO
+    ══════════════════════════════════════ */
+    var form = document.getElementById('formAgendamento');
+    var formSucesso = document.getElementById('formSucesso');
+    var linkFallback = document.getElementById('linkWhatsAppFallback');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Limpa erros anteriores
+      document.querySelectorAll('.field-error').forEach(function (el) { el.classList.remove('show'); });
+      document.querySelectorAll('.form-group').forEach(function (el) { el.classList.remove('has-error'); });
+
+      var valido = true;
+
+      // Nome
+      var nome = document.getElementById('campo-nome').value.trim();
+      if (nome.length < 3) {
+        document.getElementById('erro-nome').classList.add('show');
+        document.getElementById('group-nome').classList.add('has-error');
+        valido = false;
+      }
+
+      // Telefone
+      var telefone = document.getElementById('campo-telefone').value.trim();
+      var telDigits = telefone.replace(/\D/g, '');
+      if (telDigits.length < 10 || telDigits.length > 11) {
+        document.getElementById('erro-telefone').classList.add('show');
+        document.getElementById('group-telefone').classList.add('has-error');
+        valido = false;
+      }
+
+      // E-mail
+      var email = document.getElementById('campo-email').value.trim();
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById('erro-email').classList.add('show');
+        document.getElementById('group-email').classList.add('has-error');
+        valido = false;
+      }
+
+      // LGPD
+      var lgpd = document.getElementById('campo-lgpd').checked;
+      if (!lgpd) {
+        document.getElementById('erro-lgpd').classList.add('show');
+        valido = false;
+      }
+
+      if (!valido) {
+        // Foca no primeiro campo com erro
+        var primeiroErro = form.querySelector('.has-error input, .has-error select');
+        if (primeiroErro) primeiroErro.focus();
+        return;
+      }
+
+      // Monta a mensagem
+      var msg =
+        'Olá! Quero agendar uma aula experimental na Team Máximo Bertioga.\n\n' +
+        'Nome: ' + nome + '\n' +
+        'Telefone: ' + telefone + '\n' +
+        'E-mail: ' + email;
+
+      var url = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(msg);
+
+      // Salva URL no fallback
+      linkFallback.href = url;
+
+      // Tenta abrir o WhatsApp
+      var janela = window.open(url, '_blank', 'noopener');
+
+      // Dispara evento de conversão (descomentar quando configurar Meta Pixel e GA4)
+      // fbq('track', 'Lead');
+      // gtag('event', 'generate_lead', { event_category: 'formulario', event_label: 'aula_experimental' });
+
+      // Mostra estado de sucesso
+      form.style.display = 'none';
+      formSucesso.classList.add('active');
+
+      // Fallback: se pop-up foi bloqueado, mostra o link
+      if (!janela || janela.closed || typeof janela.closed === 'undefined') {
+        // Pop-up foi bloqueado — o link já está visível no estado de sucesso
+        linkFallback.style.display = 'inline-flex';
+        // Adiciona um aviso extra
+        var aviso = document.createElement('p');
+        aviso.style.color = 'var(--accent)';
+        aviso.style.fontSize = '0.8125rem';
+        aviso.style.marginTop = '12px';
+        aviso.textContent = 'O pop-up pode ter sido bloqueado. Clique no botão acima para abrir o WhatsApp.';
+        formSucesso.appendChild(aviso);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
