@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agende sua Aula | Team Máximo Bertioga</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #111116;
+      --surface: #17171e;
+      --surface-2: #1e1e27;
+      --border: #2a2a35;
+      --text: #f4f4f7;
+      --text-muted: #a3a3b2;
+      --accent: #C1272D;
+      --accent-soft: rgba(193, 39, 45, 0.18);
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    .agendamento-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 72px;
+      background: rgba(17, 17, 22, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .agendamento-header nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+    }
+
+    .agendamento-header .logo {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .agendamento-header a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .agendamento-header a:hover {
+      color: var(--accent);
+    }
+
+    /* ── CONTAINER ── */
+    .agendamento-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+      padding-top: calc(72px + 40px);
+      padding-bottom: 60px;
+    }
+
+    /* ── RESUMO DO ALUNO ── */
+    .resumo-aluno {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .resumo-aluno h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(1.75rem, 6vw, 2.5rem);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+
+    .aluno-info {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: inline-block;
+    }
+
+    .aluno-info p {
+      margin: 12px 0;
+      font-size: 1rem;
+    }
+
+    .aluno-info strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ── CALENDÁRIO ── */
+    .calendario-section {
+      margin-bottom: 60px;
+    }
+
+    .calendario-section h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .calendario-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .calendario-nav button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      min-height: 48px;
+    }
+
+    .calendario-nav button:hover {
+      background: #8E1B20;
+    }
+
+    .calendario-nav h3 {
+      font-size: 1.25rem;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    /* ── GRID CALENDÁRIO ── */
+    .calendario {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .dias-semana {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .dias-semana div {
+      font-weight: 700;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      padding: 8px 0;
+      text-transform: uppercase;
+    }
+
+    .dias {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .dia {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+      font-size: 0.9375rem;
+    }
+
+    .dia:hover:not(.disabled):not(.domingo):not(.sabado) {
+      background: var(--surface-2);
+      border-color: var(--accent);
+    }
+
+    .dia.disabled {
+      color: var(--text-muted);
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .dia.domingo,
+    .dia.sabado {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .dia.selecionado {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* ── CONFIRMAÇÃO ── */
+    .confirmacao {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 24px;
+      margin-top: 60px;
+    }
+
+    .dia-selecionado {
+      margin-bottom: 32px;
+    }
+
+    .dia-selecionado p {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    #dia-confirmacao {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .btn-confirmar {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 50px;
+      transition: background 0.2s;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .btn-confirmar:hover {
+      background: #8E1B20;
+    }
+
+    .btn-confirmar:disabled {
+      background: var(--text-muted);
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .info-whatsapp {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 16px;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      .agendamento-container {
+        padding-top: calc(72px + 20px);
+      }
+
+      .resumo-aluno {
+        margin-bottom: 40px;
+      }
+
+      .calendario-nav {
+        gap: 16px;
+      }
+
+      .calendario-nav button {
+        padding: 10px 16px;
+        font-size: 0.875rem;
+      }
+
+      .calendario {
+        padding: 16px;
+      }
+
+      .dia {
+        font-size: 0.8125rem;
+      }
+
+      .confirmacao {
+        padding: 24px 16px;
+      }
+
+      .btn-confirmar {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="agendamento-header">
+    <nav>
+      <a href="/" class="logo">Team Máximo</a>
+      <a href="/">← Voltar</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="agendamento-container">
+
+    <!-- RESUMO DO ALUNO -->
+    <section class="resumo-aluno">
+      <h1>Complete seu agendamento</h1>
+      <div class="aluno-info">
+        <p>Nome: <strong id="resumo-nome">-</strong></p>
+        <p>Email: <strong id="resumo-email">-</strong></p>
+        <p>Faixa: <strong id="resumo-faixa">-</strong></p>
+      </div>
+    </section>
+
+    <!-- CALENDÁRIO -->
+    <section class="calendario-section">
+      <h2>Escolha o dia da sua aula</h2>
+
+      <div class="calendario-nav">
+        <button id="mes-anterior">← Anterior</button>
+        <h3 id="mes-ano"></h3>
+        <button id="proximo-mes">Próximo →</button>
+      </div>
+
+      <div class="calendario">
+        <div class="dias-semana">
+          <div>Dom</div>
+          <div>Seg</div>
+          <div>Ter</div>
+          <div>Qua</div>
+          <div>Qui</div>
+          <div>Sex</div>
+          <div>Sab</div>
+        </div>
+        <div id="dias-calendario" class="dias"></div>
+      </div>
+    </section>
+
+    <!-- CONFIRMAÇÃO -->
+    <section class="confirmacao">
+      <div class="dia-selecionado">
+        <p>Dia selecionado:</p>
+        <h2 id="dia-confirmacao">Selecione um dia</h2>
+        <p>Horário: <strong>19h00</strong></p>
+      </div>
+      <button id="btn-confirmar" class="btn-confirmar" disabled>
+        Confirmar Agendamento
+      </button>
+      <p class="info-whatsapp">
+        Ao confirmar, você será redirecionado para o WhatsApp
+      </p>
+    </section>
+
+  </main>
+
+  <script src="/js/agendamento.js"></script>
+</body>
+
+</html>

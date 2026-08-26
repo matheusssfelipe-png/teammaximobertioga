@@ -2173,7 +2173,19 @@
               <div class="field-error" id="erro-email" aria-live="polite">Informe um e-mail válido.</div>
             </div>
 
-
+            <div class="form-group" id="group-faixa">
+              <label for="campo-faixa">Sua faixa *</label>
+              <select id="campo-faixa" name="faixa" required>
+                <option value="">Selecione sua faixa</option>
+                <option value="Iniciante">Iniciante (nunca treinei)</option>
+                <option value="Faixa Branca">Faixa Branca</option>
+                <option value="Faixa Azul">Faixa Azul</option>
+                <option value="Faixa Roxa">Faixa Roxa</option>
+                <option value="Faixa Marrom">Faixa Marrom</option>
+                <option value="Faixa Preta">Faixa Preta</option>
+              </select>
+              <div class="field-error" id="erro-faixa" aria-live="polite">Selecione sua faixa.</div>
+            </div>
 
             <div class="form-check" id="group-lgpd">
               <input type="checkbox" id="campo-lgpd" name="lgpd" required>
@@ -2473,11 +2485,9 @@
     });
 
     /* ══════════════════════════════════════
-       VALIDAÇÃO E ENVIO DO FORMULÁRIO
+       VALIDAÇÃO E REDIRECIONAMENTO DO FORMULÁRIO
     ══════════════════════════════════════ */
     var form = document.getElementById('formAgendamento');
-    var formSucesso = document.getElementById('formSucesso');
-    var linkFallback = document.getElementById('linkWhatsAppFallback');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -2514,6 +2524,14 @@
         valido = false;
       }
 
+      // Faixa
+      var faixa = document.getElementById('campo-faixa').value;
+      if (!faixa) {
+        document.getElementById('erro-faixa').classList.add('show');
+        document.getElementById('group-faixa').classList.add('has-error');
+        valido = false;
+      }
+
       // LGPD
       var lgpd = document.getElementById('campo-lgpd').checked;
       if (!lgpd) {
@@ -2528,41 +2546,19 @@
         return;
       }
 
-      // Monta a mensagem
-      var msg =
-        'Olá! Quero agendar uma aula experimental na Team Máximo Bertioga.\n\n' +
-        'Nome: ' + nome + '\n' +
-        'Telefone: ' + telefone + '\n' +
-        'E-mail: ' + email;
+      // Salvar dados em SessionStorage
+      var dadosAluno = {
+        nome: nome,
+        telefone: telefone,
+        email: email,
+        faixa: faixa,
+        timestamp: new Date().toISOString()
+      };
 
-      var url = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(msg);
+      sessionStorage.setItem('dadosAgendamento', JSON.stringify(dadosAluno));
 
-      // Salva URL no fallback
-      linkFallback.href = url;
-
-      // Tenta abrir o WhatsApp
-      var janela = window.open(url, '_blank', 'noopener');
-
-      // Dispara evento de conversão (descomentar quando configurar Meta Pixel e GA4)
-      // fbq('track', 'Lead');
-      // gtag('event', 'generate_lead', { event_category: 'formulario', event_label: 'aula_experimental' });
-
-      // Mostra estado de sucesso
-      form.style.display = 'none';
-      formSucesso.classList.add('active');
-
-      // Fallback: se pop-up foi bloqueado, mostra o link
-      if (!janela || janela.closed || typeof janela.closed === 'undefined') {
-        // Pop-up foi bloqueado — o link já está visível no estado de sucesso
-        linkFallback.style.display = 'inline-flex';
-        // Adiciona um aviso extra
-        var aviso = document.createElement('p');
-        aviso.style.color = 'var(--accent)';
-        aviso.style.fontSize = '0.8125rem';
-        aviso.style.marginTop = '12px';
-        aviso.textContent = 'O pop-up pode ter sido bloqueado. Clique no botão acima para abrir o WhatsApp.';
-        formSucesso.appendChild(aviso);
-      }
+      // Redirecionar para página de agendamento
+      window.location.href = '/agendamento.html';
     });
   </script>
 
