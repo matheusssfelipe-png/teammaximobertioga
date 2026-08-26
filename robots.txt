@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /.env
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.jiujitsubertioga.com.br/sitemap.xml
