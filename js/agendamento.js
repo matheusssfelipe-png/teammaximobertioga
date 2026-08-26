@@ -180,7 +180,7 @@ Obrigado!
   `.trim();
 
   // URL WhatsApp (usando wa.me)
-  const numeroWhatsApp = '5511987654321'; // Substituir pelo número real
+  const numeroWhatsApp = '5513982071430';
   const mensagemCodificada = encodeURIComponent(mensagem);
   const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
