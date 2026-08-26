@@ -141,7 +141,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 16px;
       margin-bottom: 32px;
       flex-wrap: wrap;
     }
@@ -159,6 +159,12 @@
       min-height: 48px;
     }
 
+    @media (min-width: 768px) {
+      .calendario-nav {
+        gap: 24px;
+      }
+    }
+
     .calendario-nav button:hover {
       background: #8E1B20;
     }
@@ -174,7 +180,7 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 16px;
       max-width: 500px;
       margin: 0 auto;
     }
@@ -182,23 +188,23 @@
     .dias-semana {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 8px;
-      margin-bottom: 16px;
+      gap: 6px;
+      margin-bottom: 12px;
       text-align: center;
     }
 
     .dias-semana div {
       font-weight: 700;
       color: var(--text-muted);
-      font-size: 0.875rem;
-      padding: 8px 0;
+      font-size: 0.75rem;
+      padding: 6px 0;
       text-transform: uppercase;
     }
 
     .dias {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 8px;
+      gap: 6px;
     }
 
     .dia {
@@ -211,7 +217,31 @@
       cursor: pointer;
       font-weight: 500;
       transition: all 0.2s;
-      font-size: 0.9375rem;
+      font-size: 0.8125rem;
+    }
+
+    @media (min-width: 768px) {
+      .calendario {
+        padding: 24px;
+      }
+
+      .dias-semana {
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .dias-semana div {
+        font-size: 0.875rem;
+        padding: 8px 0;
+      }
+
+      .dias {
+        gap: 8px;
+      }
+
+      .dia {
+        font-size: 0.9375rem;
+      }
     }
 
     .dia:hover:not(.disabled):not(.domingo):not(.sabado) {
@@ -275,7 +305,7 @@
       font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
-      min-height: 50px;
+      min-height: 48px;
       transition: background 0.2s;
       width: 100%;
       max-width: 400px;
@@ -307,21 +337,9 @@
         margin-bottom: 40px;
       }
 
-      .calendario-nav {
-        gap: 16px;
-      }
-
       .calendario-nav button {
         padding: 10px 16px;
         font-size: 0.875rem;
-      }
-
-      .calendario {
-        padding: 16px;
-      }
-
-      .dia {
-        font-size: 0.8125rem;
       }
 
       .confirmacao {
